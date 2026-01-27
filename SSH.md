@@ -43,3 +43,22 @@ After that, I am able to SSH to the server with just the passphrase.
 
 ## Utilize SSH agent 
 
+As projects grow in scope and size, it may become necessary to use more than one SSH key for different servers, user accounts, or projects.
+
+At that point, an SSH Agent is recommended. This feature runs in the background and securely stores your private keys. It lets you manage SSH key pairs across multiple connections and eliminates the need to repeatedly enter private key passphrases during a session.
+
+To start, launch the terminal and enter the following command to start the agent:
+
+`eval "$(ssh-agent -s)"`
+
+Then, enter the **ssh-add** command to add your private key to the SSH agent. Replace ‘private_key’ with your file name.
+
+<img width="914" height="152" alt="evalandadd" src="https://github.com/user-attachments/assets/d964df49-1015-4042-ad24-1193c88cf38b" /><br/>
+
+Run the following command to confirm that your private key has been added. It will list the identities currently held by the agent.
+
+`ssh-add -l`
+
+<img width="1152" height="68" alt="keyverification" src="https://github.com/user-attachments/assets/fb882ed4-a55c-42d1-a904-4ad2401da400" /><br/>
+
+Now that the SSH agent is running and your private key added, you can connect to remote servers without entering your passphrase for each session. Simply use the ssh user@hostname command to log in.
