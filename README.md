@@ -1,5 +1,8 @@
-# Intital Setup 
+## Intital Setup 
 The Setup file contains instructions on purchase and setup of a domain and VPS from Hostinger.  
 
-# SSH
-The SSH file demonstrates how to remote into the server via ssh and the use of public/private keys. 
+## SSH
+The **SSH** file demonstrates how to remote into the server via ssh and the use of public/private keys. 
+
+## User 
+The **Users** file explains user creation and basic user/group management. 
